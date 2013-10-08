@@ -76,8 +76,10 @@ The portal tool generates an SLD based on the layer name advertised in the WMS s
 
 # Conclusions #
 
-When Using Geoserver, the SLD needs to include the workspace name as a prefix on the NamedLayer/Name; When using ArcGIS, the NamedLayer/Name is not expected to have a prefix.  The layer name from the getCapabilities response provides the correct string to use if the endpoint URL used for Geoserver is the base URL for the service, with no workspace name.
+When Using Geoserver, the SLD needs to include the workspace name as a prefix on the NamedLayer/Name; When using ArcGIS, the NamedLayer/Name is not expected to have a prefix.  The layer name from the getCapabilities response provides the correct string to use for identifying layers in the SLD if the endpoint URL used for Geoserver is the base URL for the service, with no workspace name.
 
-For the USGIN use case, i.e. using the SAME SLD against several geosciml-portrayal based WMS services, in may be necessary to provide a two named layers, one with and one without a workspace prefix, and Geoserver implementations may have to be required to use the same workspace name for gsmlp layers.
+For the USGIN use case, i.e. using the SAME SLD against several geosciml-portrayal based WMS services, in may be necessary to provide a two named layers, one with and one without a workspace prefix (depending on ArcGIS and Mapserver behavior), and Geoserver implementations may have to be required to use the same workspace name for gsmlp layers.
 
+If naming ArcGIS geosciml portrayal layers using the same prefix string that is used to identify the GeoSciML portrayal workspace in GeoServer implementations may make SLDs with two (prefix and no prefix) named layers unnecessary.
 
+Explore using styles in GeoSciML portrayal SLD to implement lithology and age portrayals as styles on the same named layer.
