@@ -1,7 +1,9 @@
 # Notes #
 In an SLD-enabled WMS, 
- --- LAYERS and STYLES parameters are optional when an SLD parameter is supplied.
- --- when the LAYERS and STYLES parameters are supplied and an SLD parameter is supplied, the WMS goes into 'library mode' and has to try and work out which of the external (e.g. supplied via the SLD parameter value) styles and which of the internal styles (e.g. supplied via the LAYERS and STYLES parameter values) it applies.
+
+ - LAYERS and STYLES parameters are optional when an SLD parameter is supplied.
+
+ - when the LAYERS and STYLES parameters are supplied and an SLD parameter is supplied, the WMS goes into 'library mode' and has to try and work out which of the external (e.g. supplied via the SLD parameter value) styles and which of the internal styles (e.g. supplied via the LAYERS and STYLES parameter values) it applies.
 ##  from OGC 05-078r4: ##
 To make the HTTP-GET methods more practical for use, the SLD can also be used in
 one of two different modes depending on whether the LAYERS parameter is present in
