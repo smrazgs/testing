@@ -1,4 +1,5 @@
-<h1>Notes</h1>
+<h1>Notes on WFS implementations and SLDs</h1>
+<p>Stephen M Richard, 2013-10-08</p>
 <p>In an SLD-enabled WMS, </p>
 <ul>
 <li>
@@ -12,10 +13,10 @@
 <p>To make the HTTP-GET methods more practical for use, the SLD can also be used in
 one of two different modes depending on whether the LAYERS parameter is present in
 the request.</p>
-<p><strong>If LAYERS parameter is not present in the request</strong>, then all layers identified in the SLD document are
+<p><strong>If the LAYERS parameter is NOT present in the request</strong>, then all layers identified in the SLD document are
 rendered with all defined styles.</p>
 <p><strong>If the LAYERS parameter is present in the request</strong>, then only the layers identified by that parameter are
-rendered and the SLD is used as a “<em>style library</em>”.</p>
+rendered and the SLD is used as a <em>'style library'</em>.</p>
 <p>When an SLD is used as a <em>style library</em>, the STYLES parameter is interpreted such that the styles defined in the SLD take precedence over the named styles stored within the map server. If the LAYER specified by the request LAYER parameter is defined and in the SLD, and has an associated STYLE with a name matching the STYLE parameter value in the request, then the SLD definition is used. Otherwise, the standard named-style mechanism built into the map server is used.</p>
 <p>User-defined SLD styles can be given names and they can be marked as being the default STYLE for a LAYER.
 IF the request specifies STYLE=default, and the SLD contains a STYLE marked as default for a LAYER matching the request LAYER parameter value, then that default style from the SLD is used; otherwise, the standard default style for the LAYER defined by the map server is used.</p>
@@ -27,12 +28,13 @@ IF the request specifies STYLE=default, and the SLD contains a STYLE marked as d
 <p><a href="http://ogc.bgs.ac.uk/cgi-bin/BGS_Bedrock_and_Superficial_Geology/wms?REQUEST=GetMap&amp;SERVICE=WMS&amp;VERSION=1.3.0&amp;FORMAT=image/png&amp;BGCOLOR=0xFFFFFF&amp;TRANSPARENT=TRUE&amp;CRS=EPSG:4326&amp;BBOX=49.0,-10.5,61.9,3.2&amp;WIDTH=900&amp;HEIGHT=881&amp;SLD=http%3A%2F%2Fogc.bgs.ac.uk%2Fsld%2FUKCoShelf_BGS_1M_SBS-original-mod3a.sld&amp;LAYERS=UKCoShelf_BGS_1M_SBS&amp;STYLES=default&amp;">GetMap with the external SLD and with layers and styles params</a> gives you the same result as the external SLD without the layers and styles params, which is the expected result in this scenario.</p>
 <p><a href="http://ogc.bgs.ac.uk/sld/UKCoShelf_BGS_1M_SBS-original-mod3a.sld">SLD Location:</a> This is a v1.1.0 SLD, named layer is UKCoShelf_BGS_1M_SBS, no prefix.
 This is a Layer/Name in the capabilities document for the service</p>
+
 <h3>Nevada, ArcGIS server</h3>
 <p><a href="http://gisweb.unr.edu/arcgis/services/OneGeology/NBMG_Geology/MapServer/WMSServer?SERVICE=WMS&amp;VERSION=1.3.0&amp;REQUEST=GetCapabilities">Get Capabilities</a>. Has layer name US-NV_NBMG_500k_Geology, no prefix. A default style element is present.</p>
 <p><a href="http://gisweb.unr.edu/arcgis/services/OneGeology/NBMG_Geology/MapServer/WMSServer?SERVICE=WMS&amp;VERSION=1.3.0&amp;REQUEST=GetMap&amp;BBOX=39.7,-116.2,41,-114.6&amp;CRS=EPSG:4326&amp;WIDTH=925&amp;HEIGHT=802&amp;LAYERS=US-NV_NBMG_500k_Geology&amp;STYLES=&amp;FORMAT=image/jpeg&amp;DPI=96&amp;MAP_RESOLUTION=96&amp;FORMAT_OPTIONS=dpi:96&amp;SLD=http%3A%2F%2Fogc.bgs.ac.uk%2Fsld%2Fnevada-example.sld&amp;">Layers and Styles parameters with ArcGIS server and SLD WMS:</a>. This works.</p>
-<p><a href="http://gisweb.unr.edu/arcgis/services/OneGeology/NBMG_Geology/MapServer/WMSServer?SERVICE=WMS&amp;VERSION=1.3.0&amp;REQUEST=GetMap&amp;BBOX=39.66370840865538128,-116.13087390374420238,40.95995233180237705,-114.63744574291149547&amp;CRS=EPSG:4326&amp;WIDTH=925&amp;HEIGHT=802&amp;FORMAT=image/jpeg&amp;DPI=96&amp;MAP_RESOLUTION=96&amp;FORMAT_OPTIONS=dpi:96&amp;SLD=http%3A%2F%2Fogc.bgs.ac.uk%2Fsld%2Fnevada-example.sld&amp;"> SLD WMS request, without LAYERS and STYLES parameters:</a>; this errors:
-<code>&lt;ServiceException code=&quot;StylesNotDefined&quot;&gt;Parameter 'styles' is required.&lt;/ServiceException&gt;</code>
-<code>&lt;ServiceException code=&quot;LayerNotDefined&quot;&gt;Parameter 'layer(s)' contains unacceptable value:&lt;/ServiceException&gt;</code></p>
+<p><a href="http://gisweb.unr.edu/arcgis/services/OneGeology/NBMG_Geology/MapServer/WMSServer?SERVICE=WMS&amp;VERSION=1.3.0&amp;REQUEST=GetMap&amp;BBOX=39.66370840865538128,-116.13087390374420238,40.95995233180237705,-114.63744574291149547&amp;CRS=EPSG:4326&amp;WIDTH=925&amp;HEIGHT=802&amp;FORMAT=image/jpeg&amp;DPI=96&amp;MAP_RESOLUTION=96&amp;FORMAT_OPTIONS=dpi:96&amp;SLD=http%3A%2F%2Fogc.bgs.ac.uk%2Fsld%2Fnevada-example.sld&amp;"> SLD WMS request, without LAYERS and STYLES parameters:</a>; this errors:</p>
+<p><code>&lt;ServiceException code=&quot;StylesNotDefined&quot;&gt;Parameter 'styles' is required.&lt;/ServiceException&gt;</code></p>
+<p><code>&lt;ServiceException code=&quot;LayerNotDefined&quot;&gt;Parameter 'layer(s)' contains unacceptable value:&lt;/ServiceException&gt;</code></p>
 <p><a href="http://ogc.bgs.ac.uk/sld/nevada-example.sld">SLD location</a>. The NamedLayer/Name has no prefix.</p>
 <h3>Delaware GeoServer implementation</h3>
 <p><a href="http://maps.dgs.udel.edu/geoserver/DGS_Surficial_and_Contact_Geology/wms?service=WMS&amp;version=1.3.0&amp;request=GetCapabilities">WMS service capabilities with workspace name in the capabilities URL:</a>.  The geoserver workspace prefixes are not included in the layer names.</p>
