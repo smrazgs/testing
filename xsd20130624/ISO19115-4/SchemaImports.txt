@@ -1,0 +1,42 @@
+mac.xsd:
+  <import namespace="http://www.isotc211.org/2005/cit/1.0/2013-06-24" schemaLocation="../../../ISO19115-3/cit/1.0/cit.xsd"/>
+  <import namespace="http://www.isotc211.org/2005/gco" schemaLocation="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/gco/gco.xsd"/>
+  <import namespace="http://www.isotc211.org/2005/gss" schemaLocation="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/gss/gss.xsd"/>
+  <import namespace="http://www.isotc211.org/2005/mcc/1.0/2013-06-24" schemaLocation="../../../ISO19115-3/mcc/1.0/mcc.xsd"/>
+  <import namespace="http://www.isotc211.org/2005/mri/1.0/2013-06-24" schemaLocation="../../../ISO19115-3/mri/1.0/mri.xsd"/>
+
+mai.xsd:
+  <import namespace="http://www.isotc211.org/2005/mac/1.0/2013-06-24" schemaLocation="../../mac/1.0/mac.xsd"/>
+  <import namespace="http://www.isotc211.org/2005/md2/1.0/2013-06-24" schemaLocation="../../../ISO19115-3/md2/1.0/md2.xsd"/>
+  <import namespace="http://www.isotc211.org/2005/md2/1.0/2013-06-24" schemaLocation="../../../ISO19115-3/md2/1.0/md2.xsd"/>
+  <import namespace="http://www.isotc211.org/2005/mic/1.0/2013-06-24" schemaLocation="../../mic/1.0/mic.xsd"/>
+  <import namespace="http://www.isotc211.org/2005/mil/1.0/2013-06-24" schemaLocation="../../mil/1.0/mil.xsd"/>
+  <import namespace="http://www.isotc211.org/2005/mis/1.0/2013-06-24" schemaLocation="../../mis/1.0/mis.xsd"/>
+
+mic.xsd:
+  <import namespace="http://www.isotc211.org/2005/mrc/1.0/2013-06-24" schemaLocation="../../../ISO19115-3/mrc/1.0/mrc.xsd"/>
+  
+contentInformationImagery.xsd:
+  changed the import URL as well as the gco namespace definition in the root <schema> tag
+
+mil.xsd:
+  <import namespace="http://www.isotc211.org/2005/cit/1.0/2013-06-24" schemaLocation="../../../ISO19115-3/cit/1.0/cit.xsd"/>
+<!- <import namespace="http://www.isotc211.org/2005/dqm/1.0/2013-06-24" schemaLocation="../../../ISO19157/dqm/1.0/dqm.xsd"/> -->
+  <import namespace="http://www.isotc211.org/2005/dqm/1.0/2013-06-24" schemaLocation="../../../ISO19157-2/mdq/1.0/mdq.xsd"/>
+  <import namespace="http://www.isotc211.org/2005/mcc/1.0/2013-06-24" schemaLocation="../../../ISO19115-3/mcc/1.0/mcc.xsd"/>
+  <import namespace="http://www.isotc211.org/2005/mdt/1.0/2013-06-24" schemaLocation="../../../ISO19115-3/mdt/1.0/mdt.xsd"/>
+  <import namespace="http://www.isotc211.org/2005/mrc/1.0/2013-06-24" schemaLocation="../../../ISO19115-3/mrc/1.0/mrc.xsd"/>
+  <import namespace="http://www.isotc211.org/2005/mrd/1.0/2013-06-24" schemaLocation="../../../ISO19115-3/mrd/1.0/mrd.xsd"/>
+  <import namespace="http://www.isotc211.org/2005/mri/1.0/2013-06-24" schemaLocation="../../../ISO19115-3/mri/1.0/mri.xsd"/>
+  <import namespace="http://www.isotc211.org/2005/mrl/1.0/2013-06-24" schemaLocation="../../../ISO19115-3/mrl/1.0/mrl.xsd"/>
+  <import namespace="http://www.isotc211.org/2005/msr/1.0/2013-06-24" schemaLocation="../../../ISO19115-3/msr/1.0/msr.xsd"/>
+
+mis.xsd:
+  <import namespace="http://www.isotc211.org/2005/dqm/1.0/2013-06-24" schemaLocation="../../../ISO19157/dqm/1.0/dqm.xsd"/>
+  <import namespace="http://www.isotc211.org/2005/mac/1.0/2013-06-24" schemaLocation="../../mac/1.0/mac.xsd"/>
+  <import namespace="http://www.isotc211.org/2005/mrs/1.0/2013-06-24" schemaLocation="../../../ISO19115-3/mrs/1.0/mrs.xsd"/>
+  <import namespace="http://www.isotc211.org/2005/msr/1.0/2013-06-24" schemaLocation="../../../ISO19115-3/msr/1.0/msr.xsd"/>
+
+mdq.xsd:
+  <import namespace="http://www.isotc211.org/2005/cit/1.0/2013-06-24" schemaLocation="../../../ISO19115-3/cit/1.0/cit.xsd"/>
+  <import namespace="http://www.isotc211.org/2005/mcc/1.0/2013-06-24" schemaLocation="../../../ISO19115-3/mcc/1.0/mcc.xsd"/>  
