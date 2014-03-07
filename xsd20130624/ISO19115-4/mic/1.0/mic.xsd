@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:mic="http://www.isotc211.org/2005/mic/1.0/2013-06-24" 
+  xmlns:mrc="http://www.isotc211.org/2005/mrc/1.0/2013-06-24" elementFormDefault="qualified" targetNamespace="http://www.isotc211.org/2005/mic/1.0/2013-06-24" version="">
+  <include schemaLocation="contentInformationImagery.xsd"/>
+  <import namespace="http://www.isotc211.org/2005/mrc/1.0/2013-06-24" schemaLocation="../../../ISO19115-3/mrc/1.0/mrc.xsd"/>
+  <!--XML Schema document created by ShapeChange - http://shapechange.net/-->
+</schema>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?><schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:dqm="http://www.isotc211.org/2005/dqm/1.0/2013-06-24" xmlns:gco="http://www.isotc211.org/2005/gco" elementFormDefault="qualified" targetNamespace="http://www.isotc211.org/2005/dqm/1.0/2013-06-24" version="">
+  <annotation>
+    <documentation>Since there isn't an Application Schema for 19135, this is here for information until 19135 is implemented</documentation>
+  </annotation>
+  <include schemaLocation="dqm.xsd"/>
+  <import namespace="http://www.isotc211.org/2005/gco" schemaLocation="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/gco/gco.xsd"/>
+  <!--XML Schema document created by ShapeChange - http://shapechange.net/-->
+  <element name="DQM_RegisteredDataQualityBasicMeasure" substitutionGroup="gco:AbstractObject" type="dqm:DQM_RegisteredDataQualityBasicMeasure_Type"/>
+  <complexType name="DQM_RegisteredDataQualityBasicMeasure_Type">
+    <complexContent>
+      <extension base="gco:AbstractObject_Type">
+        <sequence/>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="DQM_RegisteredDataQualityBasicMeasure_PropertyType">
+    <sequence minOccurs="0">
+      <element ref="dqm:DQM_RegisteredDataQualityBasicMeasure"/>
+    </sequence>
+    <attributeGroup ref="gco:ObjectReference"/>
+    <attribute ref="gco:nilReason"/>
+  </complexType>
+  <element name="DQM_RegisteredDataQualityMeasure" substitutionGroup="gco:AbstractObject" type="dqm:DQM_RegisteredDataQualityMeasure_Type"/>
+  <complexType name="DQM_RegisteredDataQualityMeasure_Type">
+    <complexContent>
+      <extension base="gco:AbstractObject_Type">
+        <sequence/>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="DQM_RegisteredDataQualityMeasure_PropertyType">
+    <sequence minOccurs="0">
+      <element ref="dqm:DQM_RegisteredDataQualityMeasure"/>
+    </sequence>
+    <attributeGroup ref="gco:ObjectReference"/>
+    <attribute ref="gco:nilReason"/>
+  </complexType>
+  <element name="DQM_RegisteredDataQualityParameter" substitutionGroup="gco:AbstractObject" type="dqm:DQM_RegisteredDataQualityParameter_Type"/>
+  <complexType name="DQM_RegisteredDataQualityParameter_Type">
+    <complexContent>
+      <extension base="gco:AbstractObject_Type">
+        <sequence/>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="DQM_RegisteredDataQualityParameter_PropertyType">
+    <sequence minOccurs="0">
+      <element ref="dqm:DQM_RegisteredDataQualityParameter"/>
+    </sequence>
+    <attributeGroup ref="gco:ObjectReference"/>
+    <attribute ref="gco:nilReason"/>
+  </complexType>
+</schema>

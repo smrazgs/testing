@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:mac="http://www.isotc211.org/2005/mac/1.0/2013-06-24" 
+  xmlns:mai="http://www.isotc211.org/2005/mai/1.0/2013-06-24" xmlns:mda="http://www.isotc211.org/2005/mda/1.0/2013-06-24" 
+  xmlns:mic="http://www.isotc211.org/2005/mic/1.0/2013-06-24" xmlns:mil="http://www.isotc211.org/2005/mil/1.0/2013-06-24" 
+  xmlns:mis="http://www.isotc211.org/2005/mis/1.0/2013-06-24" elementFormDefault="qualified"
+  targetNamespace="http://www.isotc211.org/2005/mai/1.0/2013-06-24" version="" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:annotation>
+    <documentation>Package to gather all Metadata for imagery elements into one schme.</documentation>
+  </xs:annotation>
+  <xs:include schemaLocation="metadataEntityImagery.xsd"/>
+  <xs:import namespace="http://www.isotc211.org/2005/mac/1.0/2013-06-24" schemaLocation="../../mac/1.0/mac.xsd"/>
+  <!-- This import was changed to mda in order to include metadataApplication.xsd -->
+  <!-- <import namespace="http://www.isotc211.org/2005/md2/1.0/2013-06-24" schemaLocation="../../../ISO19115-3/md2/1.0/md2.xsd"/> -->
+  <xs:import namespace="http://www.isotc211.org/2005/mda/1.0/2013-06-24" schemaLocation="../../../ISO19115-3/mda/1.0/mda.xsd"/>
+  <xs:import namespace="http://www.isotc211.org/2005/mic/1.0/2013-06-24" schemaLocation="../../mic/1.0/mic.xsd"/>
+  <xs:import namespace="http://www.isotc211.org/2005/mil/1.0/2013-06-24" schemaLocation="../../mil/1.0/mil.xsd"/>
+  <xs:import namespace="http://www.isotc211.org/2005/mis/1.0/2013-06-24" schemaLocation="../../mis/1.0/mis.xsd"/>
+  <!--XML Schema document created by ShapeChange - http://shapechange.net/-->
+</xs:schema>

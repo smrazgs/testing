@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?><schema xmlns="http://www.w3.org/2001/XMLSchema"
+  xmlns:cit="http://www.isotc211.org/2005/cit/1.0/2012-12-10"
+  xmlns:dqm="http://www.isotc211.org/schemas/2012/dqm"
+  xmlns:mcc="http://www.isotc211.org/2005/mcc/1.0/2012-12-10"
+  xmlns:mdt="http://www.isotc211.org/2005/mdt/1.0/2012-12-10"
+  xmlns:mil="http://www.isotc211.org/2005/mil/1.0/20130302"
+  xmlns:mrc="http://www.isotc211.org/2005/mrc/1.0/2012-12-10"
+  xmlns:mrd="http://www.isotc211.org/2005/mrd/1.0/2012-12-10"
+  xmlns:mri="http://www.isotc211.org/2005/mri/1.0/2012-12-10"
+  xmlns:mrl="http://www.isotc211.org/2005/mrl/1.0/2012-12-10"
+  xmlns:msr="http://www.isotc211.org/2005/msr/1.0/2012-12-10" elementFormDefault="qualified"
+  targetNamespace="http://www.isotc211.org/2005/mil/1.0/20130302" version="">
+  <include schemaLocation="dataQualityImagery.xsd"/>
+  <import namespace="http://www.isotc211.org/2005/cit/1.0/2012-12-10"
+    schemaLocation="../../../ISO19115-3/cit/1.0/cit.xsd"/>
+  <import namespace="http://www.isotc211.org/2005/mcc/1.0/2012-12-10"
+    schemaLocation="../../../ISO19115-3/mcc/1.0/mcc.xsd"/>
+  <import namespace="http://www.isotc211.org/2005/mdt/1.0/2012-12-10"
+    schemaLocation="../../../ISO19115-3/mdt/1.0/mdt.xsd"/>
+  <import namespace="http://www.isotc211.org/2005/mrc/1.0/2012-12-10"
+    schemaLocation="../../../ISO19115-3/mrc/1.0/mrc.xsd"/>
+  <import namespace="http://www.isotc211.org/2005/mrd/1.0/2012-12-10"
+    schemaLocation="../../../ISO19115-3/mrd/1.0/mrd.xsd"/>
+  <import namespace="http://www.isotc211.org/2005/mri/1.0/2012-12-10"
+    schemaLocation="../../../ISO19115-3/mri/1.0/mri.xsd"/>
+  <import namespace="http://www.isotc211.org/2005/mrl/1.0/2012-12-10"
+    schemaLocation="../../../ISO19115-3/mrl/1.0/mrl.xsd"/>
+  <import namespace="http://www.isotc211.org/2005/msr/1.0/2012-12-10"
+    schemaLocation="../../../ISO19115-3/msr/1.0/msr.xsd"/>
+  <import namespace="http://www.isotc211.org/schemas/2012/dqm" schemaLocation="dqm.xsd"/>
+  <!--XML Schema document created by ShapeChange-->
+</schema>

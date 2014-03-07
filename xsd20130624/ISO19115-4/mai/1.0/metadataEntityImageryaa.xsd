@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?><schema xmlns="http://www.w3.org/2001/XMLSchema" 
+  xmlns:gco="http://www.isotc211.org/2005/gco" 
+  xmlns:mac="http://www.isotc211.org/2005/mac/1.0/20130302" 
+  xmlns:mai="http://www.isotc211.org/2005/mai/1.0/20130302" 
+
+  xmlns:mmd="http://www.isotc211.org/2005/mmd/1.0/2012-12-10" 
+  elementFormDefault="qualified" 
+  targetNamespace="http://www.isotc211.org/2005/mai/1.0/20130302" version="">
+  <!--  xmlns:mds="http://www.isotc211.org/2005/mds/1.0/2012-12-10"   -->
+  <import namespace="http://www.isotc211.org/2005/gco" schemaLocation="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/gco/gco.xsd"/>
+  <import namespace="http://www.isotc211.org/2005/mac/1.0/20130302" schemaLocation="../../mac/1.0/mac.xsd"/>
+ <import namespace="http://www.isotc211.org/2005/mmd/1.0/2012-12-10" schemaLocation="../../../ISO19115-3/mmd/1.0/mmd.xsd"/>
+  <!--XML Schema document created by ShapeChange-->
+  <element name="MI_Metadata" substitutionGroup="mmd:MD_Metadata" type="mai:MI_Metadata_Type">
+    <annotation>
+      <documentation>Description: Root entity that defines information about imagery or gridded data
+shortName: IMetadata</documentation>
+    </annotation>
+  </element>
+  <complexType name="MI_Metadata_Type">
+    <complexContent>
+      <extension base="mmd:MD_Metadata_Type">
+        <sequence>
+          <element maxOccurs="unbounded" minOccurs="0" name="acquisitionInformation" type="mac:MI_AcquisitionInformation_PropertyType"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="MI_Metadata_PropertyType">
+    <sequence minOccurs="0">
+      <element ref="mai:MI_Metadata"/>
+    </sequence>
+    <attributeGroup ref="gco:ObjectReference"/>
+    <attribute ref="gco:nilReason"/>
+  </complexType>
+</schema>

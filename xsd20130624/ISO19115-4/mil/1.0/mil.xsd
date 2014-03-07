@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?><schema xmlns="http://www.w3.org/2001/XMLSchema" 
+  xmlns:cit="http://www.isotc211.org/2005/cit/1.0/2013-06-24" xmlns:mdq="http://www.isotc211.org/2005/mdq/1.0/2013-06-24" 
+  xmlns:mcc="http://www.isotc211.org/2005/mcc/1.0/2013-06-24" xmlns:mdt="http://www.isotc211.org/2005/mdt/1.0/2013-06-24" 
+  xmlns:mil="http://www.isotc211.org/2005/mil/1.0/2013-06-24" xmlns:mrc="http://www.isotc211.org/2005/mrc/1.0/2013-06-24" 
+  xmlns:mrd="http://www.isotc211.org/2005/mrd/1.0/2013-06-24" xmlns:mri="http://www.isotc211.org/2005/mri/1.0/2013-06-24" 
+  xmlns:mrl="http://www.isotc211.org/2005/mrl/1.0/2013-06-24" xmlns:msr="http://www.isotc211.org/2005/msr/1.0/2013-06-24"
+  elementFormDefault="qualified" targetNamespace="http://www.isotc211.org/2005/mil/1.0/2013-06-24" version="">
+  <include schemaLocation="dataQualityImagery.xsd"/>
+  <import namespace="http://www.isotc211.org/2005/cit/1.0/2013-06-24" schemaLocation="../../../ISO19115-3/cit/1.0/cit.xsd"/>
+  <import namespace="http://www.isotc211.org/2005/dqm/1.0/2013-06-24" schemaLocation="../../../ISO19157-2/mdq/1.0/mdq.xsd"/>
+  <import namespace="http://www.isotc211.org/2005/mcc/1.0/2013-06-24" schemaLocation="../../../ISO19115-3/mcc/1.0/mcc.xsd"/>
+  <import namespace="http://www.isotc211.org/2005/mdt/1.0/2013-06-24" schemaLocation="../../../ISO19115-3/mdt/1.0/mdt.xsd"/>
+  <import namespace="http://www.isotc211.org/2005/mrc/1.0/2013-06-24" schemaLocation="../../../ISO19115-3/mrc/1.0/mrc.xsd"/>
+  <import namespace="http://www.isotc211.org/2005/mrd/1.0/2013-06-24" schemaLocation="../../../ISO19115-3/mrd/1.0/mrd.xsd"/>
+  <import namespace="http://www.isotc211.org/2005/mri/1.0/2013-06-24" schemaLocation="../../../ISO19115-3/mri/1.0/mri.xsd"/>
+  <import namespace="http://www.isotc211.org/2005/mrl/1.0/2013-06-24" schemaLocation="../../../ISO19115-3/mrl/1.0/mrl.xsd"/>
+  <import namespace="http://www.isotc211.org/2005/msr/1.0/2013-06-24" schemaLocation="../../../ISO19115-3/msr/1.0/msr.xsd"/>
+  <!--XML Schema document created by ShapeChange - http://shapechange.net/-->
+</schema>
