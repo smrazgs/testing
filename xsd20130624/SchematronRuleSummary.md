@@ -281,6 +281,8 @@ If the code value of the dataType property is one of {codelist, enumeration, cod
 
 No schematron rules are specific to this class.
 
+--------------------------------------------------------
+
 #Conformance tests for interchange documents
 
 #metadata-base.sch: Metadata base instance document
