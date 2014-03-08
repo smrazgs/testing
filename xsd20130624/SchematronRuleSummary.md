@@ -178,10 +178,6 @@ If a MD_Band element is instantiated , then the value of the units property MUST
 
 *requirements:*
 
-1. /req/resource-identification-instance/dataset-extent
-If no value for the MD_Metadata.metadataScope property is provided, or if the value of MD_Metadata.metadataScope.MD_MetadataScope. resourceScope property is equal to "dataset", then an instance of at least one of EX_GeographicBoundingBox or EX_GeographicDescription MUST be present in the metadata instance.
-1. /req/resource-identification-instance/topic-category
-If no value for the MD_Metadata.metadataScope property is provided, or if the value of MD_Metadata.metadataScope.MD_MetadataScope. resourceScope property is equal to "dataset" or equal to "series", then a value for topicCategory MUST be provided.
 1. /req/resource-identification-instance/associated-resource
 If a MD_AssociatedResource element is instantiated, then a value for either the name or metadataReference property MUST be provided. 
 
@@ -329,8 +325,15 @@ A dateInfo property value with data type = "creation" MUST be present in every M
 - http://www.isotc211.org/spec/19115-3/1.0/conf/resource-identification-xml
 - http://www.isotc211.org/spec/19115-3/1.0/conf/language-localization-xml
 
+**test:**  /conf/metadata-minimal-xml/schematron-rules
 
-Validate using the XML schema mdb.xsd. no special schematron rules for this class.
+*requirements*
+
+1. /req/resource-identification-instance/dataset-extent
+If no value for the MD_Metadata.metadataScope property is provided, or if the value of MD_Metadata.metadataScope.MD_MetadataScope. resourceScope property is equal to "dataset", then an instance of at least one of EX_GeographicBoundingBox or EX_GeographicDescription MUST be present in the metadata instance.
+1. /req/resource-identification-instance/topic-category
+If no value for the MD_Metadata.metadataScope property is provided, or if the value of MD_Metadata.metadataScope.MD_MetadataScope. resourceScope property is equal to "dataset" or equal to "series", then a value for topicCategory MUST be provided.
+
 
 # Complete metadata record
 
