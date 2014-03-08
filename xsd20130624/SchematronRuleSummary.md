@@ -214,3 +214,207 @@ If a MD_AssociatedResource element is instantiated, then a value for either the 
 
 No schematron rules specific to this package
 
+#msr.sch: Spatial representation 
+
+**conformance class:** http://www.isotc211.org/spec/19115-3/1.0/conf/spatial-representation-xml
+
+**conformance dependencies:** 
+
+- http://www.isotc211.org/spec/19115-3/1.0/conf/citation-xml
+- http://www.isotc211.org/spec/19115-3/1.0/conf/common-classes-xml
+
+No schematron rules specific to this package.
+
+
+#srv.sch: Service metadata
+
+**conformance class:** http://www.isotc211.org/spec/19115-3/1.0/conf/service-metadata-xml
+
+**conformance dependencies:**
+
+- http://www.isotc211.org/spec/19115-3/1.0/conf/citation-xml
+- http://www.isotc211.org/spec/19115-3/1.0/conf/common-classes-xml
+- http://www.isotc211.org/spec/19115-3/1.0/conf/resource-distribution-xml
+
+**test:** /conf/service-metadata-xml/schematron-rules
+
+*requirements:*
+
+1. /req/service-metadata-instance/service-keyword: If the value of `MD_Metadata.metadataScope.MD_MetadataScope.resourceScope` property is equal to "service", then one instance of `MD_Keyword` MUST have a `keyword` property value that is a term from the the service taxonomy defined in ISO 19119, 8.3, Table 9.
+1. /req/service-metadata-instance/chain-or-operation: A `SV_ServiceIdentification` instance MUST have a value for either the `containsChain` or the `containsOperation` property. 
+1. /req/service-metadata-instance/coupled-resource-exists: If the `coupledResource` property has a value, then the `couplingType` property MUST have a value
+1. /req/service-metadata-instance/operated-or-operates-on: A `SV_ServiceIdentification` instance MUST NOT contain values for both the `operatesOn` and `operatedDataset` properties. 
+1. /req/service-metadata-instance/coupled-resource-defined: If a `SV_CoupledResource` element is instantiated, then either the `resourceReference` or the `resource` property MUST have a value.
+1. /req/service-metadata-instance/coupled-resource-linkage: A `SV_CoupledResource` instance MUST NOT contain values for both the `resource` and `resourceReference` properties.
+
+#mex.sch: Metadata extension 
+
+**conformance class:**  http://www.isotc211.org/spec/19115-3/1.0/conf/metadata-extension-xml
+
+**conformance dependencies:** 
+
+- http://www.isotc211.org/spec/19115-3/1.0/conf/citation-xml
+- http://www.isotc211.org/spec/19115-3/1.0/conf/common-classes-xml
+
+**test:** /conf/metadata-extension-xml/schematron-rules
+
+/req/metadata-extension-instance/cardinality
+/req/metadata-extension-instance/conditional-condition
+/req/metadata-extension-instance/code-mandatory
+/req/metadata-extension-instance/conceptname-mandatory 
+/req/metadata-extension-instance/name-proscribed
+
+1. /req/metadata-extension-instance/cardinality: Values for the obligation, maximumOccurrence and domainValue properties in instances of  MD_ExtendedElementInformation MUST be provided,  EXCEPT when the dataType property code value is one of {codelist, enumeration, codelistElement}. 
+1. /req/metadata-extension-instance/conditional-condition: A value for the condition property MUST be provided when the code value of the obligation property is equal to 'conditional'. 
+1. /req/metadata-extension-instance/code-mandatory: If the code value of the dataType property is one of {codelist, enumeration, codelistElement} then a value MUST be provided for the code property
+1. /req/metadata-extension-instance/conceptname-mandatory: If the code value of the dataType property is one of {codelist, enumeration, codelistElement} then a value MUST be provided for the conceptName property 
+1. /req/metadata-extension-instance/name-proscribed
+If the code value of the dataType property is one of {codelist, enumeration, codelistElement} the name property must be a nil value with a nilReason = 'notApplicable' attribute value.
+
+#gcx.sch Geospatial common extended 
+
+**conformance class:** http://www.isotc211.org/spec/19115-3/1.0/conf/extended-types-xml
+
+**conformance dependencies:**
+
+- http://www.isotc211.org/spec/19115-3/1.0/conf/common-classes-xml
+
+No schematron rules are specific to this class.
+
+#Conformance tests for interchange documents
+
+#metadata-base.sch: Metadata base instance document
+
+**Conformance class:** http://www.isotc211.org/spec/19115-3/1.0/conf/metadata-base-instance
+
+**Conformance dependencies:**
+
+- http://www.isotc211.org/spec/19115-3/1.0/conf/common-classes-xml
+
+**Test:** /conf/metadata-base-instance/root-element
+
+1. /req/metadata-base-instance/root-element: A metadata instance document conforming to this specification SHALL have a root MD_Metadata element defined in the http://www.isotc211.org/2005/mdb/1.0 namespace.
+
+**Test:** /conf/metadata-base-instance/language
+
+1. /req/metadata-base-instance/language: If the language of the metadata content is not the defined default value (English, see Clause 8.3), then a value must be provided for defaultLocale language property consistent with the language content of the metadata instance.
+
+**Test:** /conf/metadata-base-instance/character-encoding
+
+1. /req/metadata-base-instance/character-encoding
+If the character encoding of the metadata content is not the defined default value (UTF-8, see Clause 8.3), then a value must be provided for defaultLocale characterEncoding property consistent with the character encoding of the metadata instance.
+
+**Test:** /conf/metadata-base-instance/metadata-scope-name
+
+1. /req/metadata-base-instance/metadata-scope-name
+If a MD_MetadataScope element is present, the name property MUST have a value if resourceScope is not equal to "dataset"
+
+**Test:** /conf/metadata-base-instance/metadata-creation-date
+
+1. /req/metadata-base-instance/metadata-creation-date
+A dateInfo property value with data type = "creation" MUST be present in every MD_Metadata instance.
+
+
+# ??.sch Minimal metadata document
+
+**conformance class:** http://www.isotc211.org/spec/19115-3/1.0/conf/metadata-minimal-xml
+
+**conformance dependencies:** 
+
+- http://www.isotc211.org/spec/19115-3/1.0/conf/metadata-base-instance
+- http://www.isotc211.org/spec/19115-3/1.0/conf/common-classes-xml
+- http://www.isotc211.org/spec/19115-3/1.0/conf/citation-xml
+- http://www.isotc211.org/spec/19115-3/1.0/conf/resource-identification-xml
+- http://www.isotc211.org/spec/19115-3/1.0/conf/language-localization-xml
+
+
+Validate using the XML schema mdb.xsd. no special schematron rules for this class.
+
+# Complete metadata record
+
+**conformance class:** http://www.isotc211.org/spec/19115-3/1.0/conf/metadata-full-xml
+
+**conformance dependencies:**
+
+- http://www.isotc211.org/spec/19115-3/1.0/conf/metadata-minimal-xml
+- http://www.isotc211.org/spec/19115-3/1.0/req/application-schema-xml
+- http://www.isotc211.org/spec/19115-3/1.0/conf/constraint-xml
+- http://www.isotc211.org/spec/19115-3/1.0/conf/lineage-xml
+- http://www.isotc211.org/spec/19115-3/1.0/conf/geospatial-extent-xml
+- http://www.isotc211.org/spec/19115-3/1.0/conf/resource-content-xml
+- http://www.isotc211.org/spec/19115-3/1.0/conf/resource-distribution-xml
+- http://www.isotc211.org/spec/19115-3/1.0/conf/maintenance-information-xml
+- http://www.isotc211.org/spec/19115-3/1.0/conf/portrayal-catalogue-xml
+- http://www.isotc211.org/spec/19115-3/1.0/conf/reference-system-xml
+- http://www.isotc211.org/spec/19115-3/1.0/conf/service-metadata-xml
+- http://www.isotc211.org/spec/19115-3/1.0/conf/spatial-representation-xml
+
+Test is schema validation using mds.xsd. No additional schematron rules required.
+
+#Metadata using geospatial common extended types
+
+**conformance class:** http://www.isotc211.org/spec/19115-3/1.0/conf/metadata-extended-types-xml
+
+**conformance dependencies:** 
+
+- http://www.isotc211.org/spec/19115-3/1.0/conf/metadata-full-xml
+- http://www.isotc211.org/spec/19115-3/1.0/conf/extended-types-xml
+
+Validate with md1.xsd. No additional schematron tests required.
+
+
+#extended-metadata.sch: Extended metadata record
+
+**conformance class:** http://www.isotc211.org/spec/19115-3/1.0/conf/extended-metadata-xml 
+
+Note that any profile that extends the base schema will need to include schema imports for the extension namespace, as well as any other ISO19115-3 components that are needed, and will need to specify schema locations for the extension namespaces in all instance documents (see tests below).  
+
+**conformance dependencies:** 
+
+- http://www.isotc211.org/spec/19115-3/1.0/conf/metadata-minimal-xml
+- http://www.isotc211.org/spec/19115-3/1.0/conf/metadata-extension-xml
+
+**Tests:**
+
+1. /conf/extended-metadata/validation: Verify that a MD_Metadata XML instance that includes child elements not defined by this specification include at least one MD_MetadataExtensionInformation element that is valid against the XML schema for the http://www.isotc211.org/2005/mex/1.0 namespace. [This needs to be tested by schematron,since we don't know what the root element of the extened metadata will be].
+1. /conf/extended-metadata-xml/new-section: Verify that if a MD_Metadata XML instance includes child elements not defined by this specification, those elements are namespace-qualified with a namespace URI different from namespaces defined by this specification
+1. /conf/extended-metadata-xml/validation: Verify that a MD_Metadata XML instance that includes child elements not defined by this specification can be validated using an XML schema validation engine; all namespaces must be associated with working schema locations. [Schematron test should look for schema locations associated with each namespace? We don't know a priori what the extended namespace URIs will be].
+1. /conf/extended-metadata-xml/new-codelist: Verify that any codelists utilized in the extended metadata con-tent are implemented following the rules in clause 8.5.5 of ISO 19139. [I don't know how we're going to test this with schematron?]
+1. /conf/extended-metadata-xml/new-element: Verify that any new XML elements utilized in the extended metadata content are implemented as subclasses of existing ISO19100-series classes following guidelines in clause 8.5.3 of ISO 19139. [is schematron test possible?-- maybe just report the elements?]
+1. /conf/extended-metadata-xml/iso-type: Verify that any new XML elements utilized in the extended metadata content includes an isoType attribute with a value that is the name of an existing ISO 19100-series class. [If namespace not in 19115-3 namespace collection, then isoType attribute is mandatory?]
+
+Many of the tests for this conformance class are 'by inspection' kinds of things.
+
+# Catalogue instance 
+
+**conformance class:** http://www.isotc211.org/spec/19115-3/1.0/conf/catalogue-xml
+
+**conformance dependencies:**
+
+- http://www.isotc211.org/spec/19115-3/1.0/conf/metadata-core-instance
+- http://www.isotc211.org/spec/19115-3/1.0/conf/language-localization-xml
+
+No additional schematron rules required for this class
+
+# Metadata application
+
+**conformance class:** http://www.isotc211.org/spec/19115-3/1.0/conf/metadata-application-xml
+
+**conformance dependencies:**
+
+- http://www.isotc211.org/spec/19115-3/1.0/conf/metadata-full-xml
+- http://www.isotc211.org/spec/19115-3/1.0/conf/extended-types-xml
+- http://www.isotc211.org/spec/19115-3/1.0/conf/extended-metadata-xml
+
+No additional schematron rules required for this class
+
+# Metadata for data transfer
+
+**conformance class:** http://www.isotc211.org/spec/19115-3/1.0/conf/metadata-data-transfer-xml
+
+**conformance dependencies:** 
+
+- http://www.isotc211.org/spec/19115-3/1.0/conf/metadata-application-xml
+- http://www.isotc211.org/spec/19115-3/1.0/conf/extended-types-xml
+
+No additional schematron rules required for this class
