@@ -12,7 +12,7 @@
   <sch:pattern id="elementContent">
     <sch:title>Element Content</sch:title>
     <sch:rule context="*">
-      <sch:assert test="./gco:CharacterString | ./@gco:nilReason | ./@xlink:href | @uuidref | ./@codeListValue | ./child::node()">Element must have content or one of the following attributes: nilReason, xlink:href or uuidref. </sch:assert>
+      <sch:assert test="./gco:CharacterString | ./@gco:nilReason | ./@indeterminatePosition | ./@xlink:href | @uuidref | ./@codeListValue | ./child::node()">Element must have content or one of the following attributes: nilReason, xlink:href or uuidref. </sch:assert>
       <sch:assert test="contains('missing inapplicable template unknown withheld', ./@gco:nilReason)">'<sch:value-of select="./@gco:nilReason"/>' is not an accepted value. gco:nilReason attribute may only contain: missing, inapplicable, template, unknown, or withheld for element: <sch:name path="."/>
       </sch:assert>
     </sch:rule>

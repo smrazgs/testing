@@ -17,8 +17,8 @@
     <sch:rule context="//mrc:MD_FeatureCatalogueDescription">
       <sch:assert test="(./mrc:includedWithDataset[gco:Boolean='true'] | ./mrc:featureCatalogueCitation | ../mrc:MD_FeatureCatalogue)">The Feature Catalog must be included eith the data, cited, or included in the metadata record</sch:assert>
     </sch:rule>
-    <sch:rule context="//mrc:attribute[mrc:MD_SampleDimension/mrc:minValue | mrc:MD_SampleDimension/mrc:maxValue | mrc:MD_SampleDimension/mrc:meanValue] ">
-      <sch:assert test="(./mrc:MD_SampleDimension/mrc:units)">Specify mrc:units if mrc:minValue, mrc:maxValue or mrc:meanValue exists.</sch:assert>
+    <sch:rule context="//mrc:attribute/mrc:MD_SampleDimension">
+      <sch:report test="(mrc:minValue | mrc:maxValue | mrc:meanValue) and not(mrc:units)">Specify mrc:units if mrc:minValue, mrc:maxValue or mrc:meanValue exists.</sch:report>
     </sch:rule>
   </sch:pattern>
 </sch:schema>
