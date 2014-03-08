@@ -19,7 +19,7 @@
         </sch:assert>
     </sch:rule>
     <sch:rule context="//mrl:LI_Source">
-      <sch:assert test="(count(./mrl:description)  + count(./mrl:scope)) &gt; 0">An LI_Source element must have either a mrl:description or mrl:scope property
+      <sch:assert test="(count(./mrl:description)  + count(./mrl:scope)) &gt; 0">Specify a mrl:description or mrl:scope property in each LI_Source element.
       </sch:assert>
     </sch:rule>
   </sch:pattern>
