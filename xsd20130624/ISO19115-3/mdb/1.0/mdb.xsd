@@ -4,7 +4,9 @@
   </annotation>
   <include schemaLocation="metadataBase.xsd"/>
   <import namespace="http://www.isotc211.org/2005/cit/1.0/2013-06-24" schemaLocation="../../cit/1.0/cit.xsd"/>
-  <import namespace="http://www.isotc211.org/2005/dqm/1.0/2013-06-24" schemaLocation="../../../ISO19157-2/dqm/1.0/dqm.xsd"/>
+  <import namespace="http://www.isotc211.org/2005/mdq/1.0/2013-06-24" schemaLocation="../../../ISO19157-2/mdq/1.0/mdq.xsd"/>
+<!--  original namespace abbreviation for data quality root was dqm
+    <import namespace="http://www.isotc211.org/2005/dqm/1.0/2013-06-24" schemaLocation="../../../ISO19157-2/dqm/1.0/dqm.xsd"/>-->
   <import namespace="http://www.isotc211.org/2005/lan/1.0/2013-06-24" schemaLocation="../../lan/1.0/lan.xsd"/>
   <import namespace="http://www.isotc211.org/2005/mcc/1.0/2013-06-24" schemaLocation="../../mcc/1.0/mcc.xsd"/>
   <import namespace="http://www.isotc211.org/2005/mri/1.0/2013-06-24" schemaLocation="../../mri/1.0/mri.xsd"/>
