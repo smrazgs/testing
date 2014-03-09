@@ -4,12 +4,12 @@
   <sch:ns prefix="mco" uri="http://www.isotc211.org/2005/mco/1.0/2013-06-24"/>
   <sch:ns prefix="mcc" uri="http://www.isotc211.org/2005/mcc/1.0/2013-06-24"/>
   <!--
-    ISO 19115-1 cit namespace schematron rules
+    ISO 19115-1 mco namespace schematron rules
     Created by thabermann@hdfgroup.org 20140308
   -->
   <sch:pattern id="conf.constraints-xml.schematron-rules">
     <sch:title>Constraint Requirements</sch:title>
-    <sch:p>Constraints for elements in the gex namespace</sch:p>
+    <sch:p>Constraints for elements in the mco namespace</sch:p>
     <sch:rule context="//mco:MD_LegalConstraints">
       <sch:assert test="(count(./mco:accessConstraints) + 
         count(./mco:useConstraints) +

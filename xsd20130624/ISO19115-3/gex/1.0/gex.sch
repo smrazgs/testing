@@ -4,10 +4,7 @@
   <sch:ns prefix="mco" uri="http://www.isotc211.org/2005/mco/1.0/2013-06-24"/>
   <sch:ns prefix="mcc" uri="http://www.isotc211.org/2005/mcc/1.0/2013-06-24"/>
   <!--
-    ISO 19115-1 cit namespace schematron rules
-    
-    Checks the non-schema requirements for the mco namespace
-    
+    ISO 19115-1 gex namespace schematron rules
     Created by thabermann@hdfgroup.org 20140308
   -->
   <sch:pattern id="conf.constraints-xml.schematron-rules">
