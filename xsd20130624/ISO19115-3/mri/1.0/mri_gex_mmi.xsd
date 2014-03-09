@@ -3,6 +3,8 @@
   <import namespace="http://www.isotc211.org/2005/cit/1.0/2013-06-24" schemaLocation="../../cit/1.0/cit.xsd"/>
   <import namespace="http://www.isotc211.org/2005/lan/1.0/2013-06-24" schemaLocation="../../lan/1.0/lan.xsd"/>
   <import namespace="http://www.isotc211.org/2005/mcc/1.0/2013-06-24" schemaLocation="../../mcc/1.0/mcc.xsd"/>  
- <!-- Only imports namespaces that are required for mandatory elements --> 
+  <import namespace="http://www.isotc211.org/2005/gex/1.0/2013-06-24" schemaLocation="../../gex/1.0/gex.xsd"/>  
+  <import namespace="http://www.isotc211.org/2005/mmi/1.0/2013-06-24" schemaLocation="../../mmi/1.0/mmi.xsd"/>
+  <!-- Imports namespaces for all mandatory and optional elements -->
   <!--XML Schema document created by ShapeChange - http://shapechange.net/-->
 </schema>
