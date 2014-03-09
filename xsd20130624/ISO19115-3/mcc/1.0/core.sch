@@ -3,10 +3,7 @@
   <sch:ns prefix="gco" uri="http://www.isotc211.org/2005/gco"/>
   <sch:ns prefix="xlink" uri="http://www.w3.org/1999/xlink"/>
   <!--
-    ISO 19115-1 cit namespace schematron rules
-    
-    Checks the core non-schema requirements
-    
+    ISO 19115-1 core schematron rules
     Created by thabermann@hdfgroup.org 20140308
   -->
   <sch:pattern id="elementContent">
