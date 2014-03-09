@@ -5,6 +5,7 @@
   <import namespace="http://www.isotc211.org/2005/mcc/1.0/2013-06-24" schemaLocation="../../mcc/1.0/mcc.xsd"/>  
   <import namespace="http://www.isotc211.org/2005/gex/1.0/2013-06-24" schemaLocation="../../gex/1.0/gex.xsd"/>  
   <import namespace="http://www.isotc211.org/2005/mmi/1.0/2013-06-24" schemaLocation="../../mmi/1.0/mmi.xsd"/>
+  <import namespace="http://www.isotc211.org/2005/mco/1.0/2013-06-24" schemaLocation="../../mco/1.0/mco.xsd"/>
   <!-- Imports namespaces for all mandatory and optional elements -->
   <!--XML Schema document created by ShapeChange - http://shapechange.net/-->
 </schema>

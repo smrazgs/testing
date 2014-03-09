@@ -1,9 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <mri:MD_DataIdentification xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="http://www.isotc211.org/2005/mdi/1.0/2013-06-24 mri.xsd"
+    xsi:schemaLocation="http://www.isotc211.org/2005/mdi/1.0/2013-06-24 mri_gex_mmi.xsd"
     xmlns:mcc="http://www.isotc211.org/2005/mcc/1.0/2013-06-24"
     xmlns:mri="http://www.isotc211.org/2005/mri/1.0/2013-06-24" 
     xmlns:lan="http://www.isotc211.org/2005/lan/1.0/2013-06-24" 
+    xmlns:gex="http://www.isotc211.org/2005/gex/1.0/2013-06-24" 
+    xmlns:mrd="http://www.isotc211.org/2005/mrd/1.0/2013-06-24" 
+    xmlns:mco="http://www.isotc211.org/2005/mco/1.0/2013-06-24" 
+    xmlns:mmi="http://www.isotc211.org/2005/mmi/1.0/2013-06-24" 
     xmlns:cit="http://www.isotc211.org/2005/cit/1.0/2013-06-24"
     xmlns:gco="http://www.isotc211.org/2005/gco"
     xmlns:xlink="http://www.w3.org/1999/xlink" 
@@ -398,10 +402,10 @@
     <mri:topicCategory>
         <mri:MD_TopicCategoryCode>farming</mri:MD_TopicCategoryCode>
     </mri:topicCategory>
-    <mri:extent gco:nilReason="withheld"/>
-        <!-- can't have an extent unless mri and gex are both imported into a containing schema so that 
+    <mri:extent>
+        <!-- can only have an extent if mri and gex are both imported into a containing schema so that 
           the abstract extent class in mcc has concrete implementation -->
-<!--       <gex:EX_Extent id="boundingExtent">
+       <gex:EX_Extent id="boundingExtent">
             <gex:description>
                 <gco:CharacterString>/*/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:extent/gmd:EX_Extent/gmd:description/gco:CharacterString</gco:CharacterString>
             </gex:description>
@@ -476,11 +480,11 @@
                 </gex:EX_TemporalExtent>
             </gex:temporalElement>
         </gex:EX_Extent>
-    </mri:extent>-->
-    <mri:resourceMaintenance gco:nilReason="withheld"/>
-        <!-- can't have an mainetenance unless mri and mmi are both imported into a containing schema so that 
+    </mri:extent>
+    <mri:resourceMaintenance>
+        <!-- can only have an maintenance if mri and mmi are both imported into a containing schema so that 
           the abstract extent class in mcc has concrete implementation -->
- <!--       <mmi:MD_MaintenanceInformation>
+        <mmi:MD_MaintenanceInformation>
             <mmi:maintenanceAndUpdateFrequency>
                 <mmi:MD_MaintenanceFrequencyCode
                     codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#MD_MaintenanceFrequencyCode"
@@ -499,7 +503,7 @@
                 </cit:CI_Date>
             </mmi:maintenanceDate>
         </mmi:MD_MaintenanceInformation>
-    </mri:resourceMaintenance>-->
+    </mri:resourceMaintenance>
     <mri:graphicOverview>
         <mcc:MD_BrowseGraphic>
             <mcc:fileName>
@@ -513,10 +517,10 @@
             </mcc:fileType>
         </mcc:MD_BrowseGraphic>
     </mri:graphicOverview>
-    <mri:resourceFormat gco:nilReason="withheld"/>
-        <!-- can't have an MD_Format unless mri and mrd are both imported into a containing schema so that 
+    <mri:resourceFormat>
+        <!-- can only have an MD_Format if mri and mrd are both imported into a containing schema so that 
           the abstract extent class in mcc has concrete implementation -->
- <!--       <mrd:MD_Format>
+        <mrd:MD_Format>
             <mrd:formatSpecificationCitation>
                 <cit:CI_Citation>
                     <cit:title>
@@ -563,40 +567,33 @@
             <mrd:formatSpecificationCitation>
                 <cit:CI_Citation>
                     <cit:title>
-                        <gcx:Anchor xlink:href="http://www.example.com/testAnchorSubstitution"
-                            >/*/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:resourceFormat/gmd:MD_Format/gmd:name/gmx:Anchor</gcx:Anchor>
+                        <gco:CharacterString>/*/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:resourceFormat/gmd:MD_Format/gmd:name/gmx:Anchor</gco:CharacterString>
                     </cit:title>
                     <cit:alternateTitle>
-                        <gcx:FileName src="http://www.example.com/testFileNameSubstitution"
-                            >/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:resourceFormat/gmd:MD_Format/gmd:specification/gmx:FileName</gcx:FileName>
+                        <gco:CharacterString>/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:resourceFormat/gmd:MD_Format/gmd:specification/gmx:FileName</gco:CharacterString>
                     </cit:alternateTitle>
                     <cit:date gco:nilReason="unknown"/>
                     <cit:edition>
-                        <gcx:Anchor xlink:href="http://www.example.com/testAnchorSubstitution"
-                            >/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:resourceFormat/gmd:MD_Format/gmd:version/gmx:Anchor</gcx:Anchor>
+                        <gco:CharacterString>/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:resourceFormat/gmd:MD_Format/gmd:version/gmx:Anchor</gco:CharacterString>
                     </cit:edition>
                     <cit:identifier>
                         <mcc:MD_Identifier>
                             <mcc:code>
-                                <gcx:Anchor
-                                    xlink:href="http://www.example.com/testAnchorSubstitution"
-                                    >/*/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:resourceFormat/gmd:MD_Format/gmd:name/gmx:Anchor</gcx:Anchor>
+                                <gco:CharacterString>/*/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:resourceFormat/gmd:MD_Format/gmd:name/gmx:Anchor</gco:CharacterString>
                             </mcc:code>
                         </mcc:MD_Identifier>
                     </cit:identifier>
                 </cit:CI_Citation>
             </mrd:formatSpecificationCitation>
             <mrd:amendmentNumber>
-                <gcx:FileName src="http://www.example.com/testFileNameSubstitution"
-                    >/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:resourceFormat/gmd:MD_Format/gmd:amendmentNumber/gmx:FileName</gcx:FileName>
+                <gco:CharacterString>/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:resourceFormat/gmd:MD_Format/gmd:amendmentNumber/gmx:FileName</gco:CharacterString>
             </mrd:amendmentNumber>
             <mrd:fileDecompressionTechnique>
-                <gcx:Anchor xlink:href="http://www.example.com/testAnchorSubstitution"
-                    >/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:resourceFormat/gmd:MD_Format/gmd:fileDecompressionTechnique/gmx:Anchor</gcx:Anchor>
+                <gco:CharacterString>/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:resourceFormat/gmd:MD_Format/gmd:fileDecompressionTechnique/gmx:Anchor</gco:CharacterString>
             </mrd:fileDecompressionTechnique>
         </mrd:MD_Format>
     </mri:resourceFormat>
--->    <mri:descriptiveKeywords>
+    <mri:descriptiveKeywords>
         <mri:MD_Keywords>
             <mri:keyword>
                 <gco:CharacterString>/*/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:descriptiveKeywords/gmd:MD_Keywords/gmd:keyword/gco:CharacterString</gco:CharacterString>
@@ -907,8 +904,10 @@
             </mri:userContactInfo>
         </mri:MD_Usage>
     </mri:resourceSpecificUsage>
-    <mri:resourceConstraints gco:nilReason="withheld"/>
-<!--        <mco:MD_Constraints>
+    <mri:resourceConstraints>
+        <!-- can only have constraints if mri and mco are both imported into a containing schema so that 
+          the abstract extent class in mcc has concrete implementation -->
+        <mco:MD_Constraints>
             <mco:useLimitation>
                 <gco:CharacterString>/*/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:resourceConstraints/gmd:MD_Constraints/gmd:useLimitation/gco:CharacterString</gco:CharacterString>
             </mco:useLimitation>
@@ -946,7 +945,7 @@
             </mco:handlingDescription>
         </mco:MD_SecurityConstraints>
     </mri:resourceConstraints>
--->
+
         <mri:associatedResource>
         <mri:MD_AssociatedResource>
             <mri:name>
@@ -983,7 +982,7 @@
                                     <cit:title>
                                         <gco:CharacterString>/*/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:aggregationInfo/gmd:MD_AggregateInformation/gmd:aggregateDataSetIdentifier/gmd:MD_Identifier/gmd:authority/gmd:CI_Citation/gmd:title</gco:CharacterString>
                                     </cit:title>
-                                    <cit:date gco:nilReason="withheld"/>
+                                    <cit:date gco:nilReason="unknown"/>
                                 </cit:CI_Citation>
                             </mcc:authority>
                             <mcc:code>
