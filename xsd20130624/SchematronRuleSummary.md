@@ -258,6 +258,9 @@ No schematron rules specific to this package.
 1. /req/service-metadata-instance/coupled-resource-defined: If a `SV_CoupledResource` element is instantiated, then either the `resourceReference` or the `resource` property MUST have a value.
 1. /req/service-metadata-instance/coupled-resource-linkage: A `SV_CoupledResource` instance MUST NOT contain values for both the `resource` and `resourceReference` properties.
 
+NOTE: the 19115-1 spec (FDIS, N3558) has a constraint "If coupledResource exists then count (coupledResource) > 0". this seems self evident, so not schematron rule is implemented. 
+
+
 *recommendation:* /req/service-metadata-instance/service-keyword: If the value of `MD_Metadata.metadataScope.MD_MetadataScope.resourceScope` property is equal to "service", then one instance of `MD_Keyword` MUST have a `keyword` property value that is a term from the the service taxonomy defined in ISO 19119, 8.3, Table 9.
 
 
