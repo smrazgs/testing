@@ -162,6 +162,7 @@ If a MD_SampleDimension element is instantiated and at least one of the maxValue
 If a MD_Band element is instantiated , then the value of the units property MUST be a unit of length.
 
 #mrd.sch: Resource distribution 
+status:done
 
 **conformance class:** http://www.isotc211.org/spec/19115-3/1.0/conf/resource-distribution-xml
 
