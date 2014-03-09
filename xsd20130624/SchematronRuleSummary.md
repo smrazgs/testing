@@ -1,4 +1,7 @@
-# metadata-core.sch
+# core.sch
+
+status: done
+
 **conformance class** http://www.isotc211.org/spec/19115-3/1.0/conf/metadata-core-instance
 
 **conformance dependencies:** NONE
@@ -28,6 +31,8 @@ No schematron tests required for this class (but there is a dependency on cit)
 note the circular dependencies between conf/common-classes-xml and conf/citation-xml.  Essentially one schematron will need to test both of these conformance classes in order to avoid circular imports.
 
 #cit.sch
+status: done
+
 **conformance class:**  http://www.isotc211.org/spec/19115-3/1.0/conf/citation-xml
 
 **conformance dependencies:**
@@ -69,6 +74,8 @@ no schematron validation required
 No schematron rules required to validate this class
 
 #mco.sch: Constraints
+status:done
+
 **conformance class:**  http://www.isotc211.org/spec/19115-3/1.0/conf/constraints-xml
 
 **conformance dependencies:**
@@ -85,6 +92,7 @@ No schematron rules required to validate this class
 1. /req/constraints-instance/releasability: If a MD_Releasability element is instantiated, then it MUST have a property value for at least one of addressee or statement.
 
 #gex.sch: Geospatial extent 
+status: done
 
 **conformance class:**  http://www.isotc211.org/spec/19115-3/1.0/conf/geospatial-extent-xml
 
@@ -101,6 +109,7 @@ No schematron rules required to validate this class
 1. /req/geospatial-extent-instance/vertical-crs:  If an EX_VerticalExtent element is instantiated, then a value for either verticalCRSid or verticalCRS MUST be present.
 
 #mmi.sch: Maintenance information
+status:done
 
 **conformance class:** http://www.isotc211.org/spec/19115-3/1.0/conf/maintenance-information-xml
 
@@ -126,6 +135,8 @@ No schematron rules required to validate this class
 no schematron rules required for validation
 
 #mrc.sch: Resource content 
+
+status:done
 
 **conformance class:** http://www.isotc211.org/spec/19115-3/1.0/conf/resource-content-xml
 
@@ -167,6 +178,8 @@ If a MD_Band element is instantiated , then the value of the units property MUST
 
 #mri.sch: Resource identification 
 
+status: done
+
 **conformance class:** http://www.isotc211.org/spec/19115-3/1.0/conf/resource-identification-xml
 
 **conformance dependencies:**
@@ -184,6 +197,8 @@ If a MD_AssociatedResource element is instantiated, then a value for either the 
 *Recommendation:* If the resource described by a metadata instance contains textual information, then a value SHOULD be provided for MD_DataIdentification defaultLocale.
 
 #mrl.sch: Resource lineage
+
+status: done
 
 **conformance class:**  http://www.isotc211.org/spec/19115-3/1.0/conf/lineage-xml
 
