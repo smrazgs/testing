@@ -252,12 +252,14 @@ No schematron rules specific to this package.
 
 *requirements:*
 
-1. /req/service-metadata-instance/service-keyword: If the value of `MD_Metadata.metadataScope.MD_MetadataScope.resourceScope` property is equal to "service", then one instance of `MD_Keyword` MUST have a `keyword` property value that is a term from the the service taxonomy defined in ISO 19119, 8.3, Table 9.
 1. /req/service-metadata-instance/chain-or-operation: A `SV_ServiceIdentification` instance MUST have a value for either the `containsChain` or the `containsOperation` property. 
 1. /req/service-metadata-instance/coupled-resource-exists: If the `coupledResource` property has a value, then the `couplingType` property MUST have a value
 1. /req/service-metadata-instance/operated-or-operates-on: A `SV_ServiceIdentification` instance MUST NOT contain values for both the `operatesOn` and `operatedDataset` properties. 
 1. /req/service-metadata-instance/coupled-resource-defined: If a `SV_CoupledResource` element is instantiated, then either the `resourceReference` or the `resource` property MUST have a value.
 1. /req/service-metadata-instance/coupled-resource-linkage: A `SV_CoupledResource` instance MUST NOT contain values for both the `resource` and `resourceReference` properties.
+
+*recommendation:* /req/service-metadata-instance/service-keyword: If the value of `MD_Metadata.metadataScope.MD_MetadataScope.resourceScope` property is equal to "service", then one instance of `MD_Keyword` MUST have a `keyword` property value that is a term from the the service taxonomy defined in ISO 19119, 8.3, Table 9.
+
 
 #mex.sch: Metadata extension 
 
