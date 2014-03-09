@@ -107,7 +107,24 @@
     </srv:couplingType>
     <srv:coupledResource>
         <srv:SV_CoupledResource>
-            
+            <!-- toggle comment for testing resourceReference and resource may not both be present -->
+            <!--<srv:resourceReference xlink:href="http://links.org/linkToResource"/>-->
+            <srv:operation>
+                <srv:SV_OperationMetadata>
+                    <srv:operationName>ShowMeTheMoney</srv:operationName>
+                    <srv:distributedComputingPlatform>
+                        <srv:DCPList codeList="http://codelists.r.us/platforms" codeListValue="theWEB">The WWW</srv:DCPList>
+                    </srv:distributedComputingPlatform>
+                    <srv:connectPoint>
+                        <cit:CI_OnlineResource>
+                            <cit:linkage>
+                                <gco:CharacterString>http://links.org/theLinkage</gco:CharacterString>
+                            </cit:linkage>
+                        </cit:CI_OnlineResource>
+                    </srv:connectPoint>
+                </srv:SV_OperationMetadata>
+            </srv:operation>
+            <srv:resource xlink:href="http://links.org/MD_DataIdentification/theResource"/>
         </srv:SV_CoupledResource>
     </srv:coupledResource>
     <srv:operatedDataset>

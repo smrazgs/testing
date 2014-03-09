@@ -37,8 +37,9 @@
     <sch:p>If a SV_CoupledResource element is instantiated, then either the resourceReference or the
       resource property MUST have a value. A SV_CoupledResource instance MUST NOT contain values for
       both the resource and resourceReference properties.</sch:p>
-    <sch:rule context="//srv:coupledResource">
-      <sch:report test="(count(./resource) &gt; 0) and (count(./resourceReference) &gt; 0)">Specify only one of resoure OR
+    <sch:rule context="//srv:SV_CoupledResource">
+      <sch:assert test="(count(./srv:resource) + count(./srv:resourceReference) &gt; 0)">Specify a resource or resourceReference for the coupledResource instance</sch:assert>
+      <sch:report test="(count(./srv:resource) &gt; 0) and (count(./srv:resourceReference) &gt; 0)">Specify only one of resoure OR
         resourceReference for the coupledResource. </sch:report>
     </sch:rule>
   </sch:pattern>
