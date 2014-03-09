@@ -239,6 +239,7 @@ No schematron rules specific to this package.
 
 
 #srv.sch: Service metadata
+status:done
 
 **conformance class:** http://www.isotc211.org/spec/19115-3/1.0/conf/service-metadata-xml
 
