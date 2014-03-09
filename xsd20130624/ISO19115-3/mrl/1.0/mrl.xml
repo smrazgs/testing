@@ -57,11 +57,11 @@
       </mrl:sourceCitation>
       <mrl:scope>
         <mcc:MD_Scope>
-          <mcc:level/>
+          <mcc:level gco:nilReason="missing"/>
           <mcc:extent xlink:href="external link to extent" gco:nilReason="withheld"/>
           <!-- can't have an extent unless mrl and gex are both imported into a containing schema so that 
           the abstract extent class in mcc has concrete implementation -->
-           <mcc:levelDescription/>
+           <mcc:levelDescription gco:nilReason="missing"/>
         </mcc:MD_Scope>
       </mrl:scope>
       <mrl:sourceStep xlink:href="#lineageProcessStep"/>
@@ -75,12 +75,25 @@
               <gml:timePosition>2005-05-05T05:05:05</gml:timePosition>
             </gml:TimeInstant>
           </mrl:stepDateTime>
-          <mrl:processor/>
+          <mrl:processor>
+            <cit:CI_Responsibility>
+              <cit:role>
+                <cit:CI_RoleCode codeList="http://codelistsR.us/myFavCodelist" codeListValue="processor">processor</cit:CI_RoleCode>
+              </cit:role>
+              <cit:party>
+                <cit:CI_Individual>
+                  <cit:name>
+                    <gco:CharacterString>Jose Theprocessor</gco:CharacterString>
+                  </cit:name>
+                </cit:CI_Individual>
+              </cit:party>
+            </cit:CI_Responsibility>
+          </mrl:processor>
         </mrl:LI_ProcessStep>
       </mrl:sourceStep>
     </mrl:LI_Source>
   </mrl:source>
-<!--  <mrl:processStep>
+  <mrl:processStep>
     <mrl:LI_ProcessStep id="lineageProcessStep">
       <mrl:description>
         <gco:CharacterString>/*/gmd:dataQualityInfo.3/gmd:DQ_DataQuality/gmd:lineage/gmd:LI_Lineage/gmd:processStep/gmd:LI_ProcessStep/gmd:description/gco:CharacterString</gco:CharacterString>
@@ -131,16 +144,16 @@
           </mrl:sourceCitation>
           <mrl:scope>
             <mcc:MD_Scope>
-              <mcc:level/>
+              <mcc:level gco:nilReason="missing"/>
               <mcc:extent gco:nilReason="withheld" xlink:href="link to external extent object"/>
-                <!-\- can't have an extent unless mrl and gex are both imported into a containing schema so that 
-          the abstract extent class in mcc has concrete implementation -\->
-               <mcc:levelDescription/>
+                <!-- can't have an extent unless mrl and gex are both imported into a containing schema so that 
+          the abstract extent class in mcc has concrete implementation -->
+               <mcc:levelDescription gco:nilReason="missing"/>
             </mcc:MD_Scope>
           </mrl:scope>
         </mrl:LI_Source>
       </mrl:source>
     </mrl:LI_ProcessStep>
-  </mrl:processStep>-->
+  </mrl:processStep>
 </mrl:LI_Lineage>
 

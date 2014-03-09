@@ -9,7 +9,7 @@
     ISO 19115-1 mrl namespace schematron rules    
     Created by steve.richard@azgs.az.gov 20140308
   -->
-  <sch:pattern id="conf.citation-xml.schematron-rules">
+  <sch:pattern id="conf.lineage-xml.schematron-rules">
     <sch:title>Lineage Metadata Requirements</sch:title>
     <sch:p>If a LI_Lineage element is instantiated and no value is provided for the LI_Lineage.statement property, then at least one of processStep or source MUST have a value. 
     and  
