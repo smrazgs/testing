@@ -5,7 +5,7 @@
     ISO 19115-1 mpc namespace schematron rules    
     Created by thabermann@hdfgroup.org 20140308
   -->
-  <sch:pattern id="conf.language.schematron-rules">
+  <sch:pattern>
     <sch:title>Portrayal Catalog Requirements</sch:title>
     <sch:p>There are no specific schematron rules for the mpc namespace, but the core.sch rules apply.</sch:p>
   </sch:pattern>
