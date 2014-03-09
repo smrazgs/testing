@@ -304,6 +304,7 @@ No schematron rules are specific to this class.
 #Conformance tests for interchange documents
 
 #metadata-base.sch: Metadata base instance document
+status:done
 
 **Conformance class:** http://www.isotc211.org/spec/19115-3/1.0/conf/metadata-base-instance
 
@@ -317,12 +318,12 @@ No schematron rules are specific to this class.
 
 **Test:** /conf/metadata-base-instance/language
 
-1. /req/metadata-base-instance/language: If the language of the metadata content is not the defined default value (English, see Clause 8.3), then a value must be provided for defaultLocale language property consistent with the language content of the metadata instance.
+1. /req/metadata-base-instance/language: If the language of the metadata content is not the defined default value (English, see Clause 8.3), then a value must be provided for defaultLocale language property consistent with the language content of the metadata instance.  There is no way to test with Schematron.
 
 **Test:** /conf/metadata-base-instance/character-encoding
 
 1. /req/metadata-base-instance/character-encoding
-If the character encoding of the metadata content is not the defined default value (UTF-8, see Clause 8.3), then a value must be provided for defaultLocale characterEncoding property consistent with the character encoding of the metadata instance.
+If the character encoding of the metadata content is not the defined default value (UTF-8, see Clause 8.3), then a value must be provided for defaultLocale characterEncoding property consistent with the character encoding of the metadata instance. There is no way to test with schematron.
 
 **Test:** /conf/metadata-base-instance/metadata-scope-name
 
