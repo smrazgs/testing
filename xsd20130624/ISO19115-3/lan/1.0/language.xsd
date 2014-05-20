@@ -5,6 +5,9 @@
   <!--<import namespace="http://www.isotc211.org/2005/gco" schemaLocation="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/gco/gco.xsd"/>-->
   <import namespace="http://www.isotc211.org/2005/gco" schemaLocation="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/gco/gco.xsd"/>
   <!--XML Schema document created by ShapeChange - http://shapechange.net/-->
+ <!-- SMR 2014-05-20  update schema for LOcalisedCharacterString_Type,
+ and PT_FreeTextPropertyType to substitute for CharacterSTringPropertyType -->
+ 
   <element name="CountryCode" substitutionGroup="gco:CharacterString" type="gco:CodeListValue_Type"/>
   <complexType name="CountryCode_PropertyType">
     <sequence minOccurs="0">
@@ -20,15 +23,24 @@
     <attribute ref="gco:nilReason"/>
   </complexType>
   <element name="LocalisedCharacterString" substitutionGroup="gco:AbstractObject" type="lan:LocalisedCharacterString_Type"/>
+
   <complexType name="LocalisedCharacterString_Type">
-    <complexContent>
+      <!-- the XML generated from ISO19139 UML, will not validate. -->
+<!--    <complexContent>
       <extension base="gco:AbstractObject_Type">
         <sequence>
           <element name="locale" type="lan:PT_Locale_PropertyType"/>
         </sequence>
       </extension>
-    </complexContent>
+    </complexContent>  -->
+    <simpleContent>
+      <extension base="string">
+        <attribute name="id" type="ID"/>
+        <attribute name="locale" type="anyURI"/>
+      </extension>
+    </simpleContent>
   </complexType>
+
   <complexType name="LocalisedCharacterString_PropertyType">
     <sequence minOccurs="0">
       <element ref="lan:LocalisedCharacterString"/>
@@ -43,6 +55,8 @@
     </sequence>
     <attribute ref="gco:nilReason"/>
   </complexType>
+  
+  
   <element name="PT_FreeText" substitutionGroup="gco:AbstractObject" type="lan:PT_FreeText_Type"/>
   <complexType name="PT_FreeText_Type">
     <complexContent>
@@ -53,13 +67,30 @@
       </extension>
     </complexContent>
   </complexType>
-  <complexType name="PT_FreeText_PropertyType">
+  
+<!-- copy from gmd freeText.xsd; change gmd: prefixes to lan: where necessary 
+  SMR 2014-05-20-->
+<!--  <complexType name="PT_FreeText_PropertyType">
     <sequence minOccurs="0">
       <element ref="lan:PT_FreeText"/>
     </sequence>
     <attributeGroup ref="gco:ObjectReference"/>
     <attribute ref="gco:nilReason"/>
+  </complexType>  -->
+  <complexType name="PT_FreeText_PropertyType">
+    <complexContent>
+      <extension base="gco:CharacterString_PropertyType">
+        <sequence minOccurs="0">
+          <element ref="lan:PT_FreeText"/>
+        </sequence>
+      </extension>
+    </complexContent>
   </complexType>
+  <!-- =========================================================================== -->
+  
+  
+  
+  
   <element name="PT_Locale" substitutionGroup="gco:AbstractObject" type="lan:PT_Locale_Type"/>
   <complexType name="PT_Locale_Type">
     <complexContent>
