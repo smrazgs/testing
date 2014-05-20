@@ -22,7 +22,10 @@
     </sequence>
     <attribute ref="gco:nilReason"/>
   </complexType>
-  <element name="LocalisedCharacterString" substitutionGroup="gco:AbstractObject" type="lan:LocalisedCharacterString_Type"/>
+  
+  <!-- localisedCharacterString needs to be in substitution group for gco:CharacterString -->
+<!--   <element name="LocalisedCharacterString" substitutionGroup="gco:AbstractObject" type="lan:LocalisedCharacterString_Type"/> -->
+  <element name="LocalisedCharacterString" substitutionGroup="gco:CharacterString" type="lan:LocalisedCharacterString_Type"/>
 
   <complexType name="LocalisedCharacterString_Type">
       <!-- the XML generated from ISO19139 UML, will not validate. -->
